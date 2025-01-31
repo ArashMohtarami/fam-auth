@@ -1,0 +1,33 @@
+[tool.poetry]
+name = "fam-auth"
+version = "0.1.0"
+description = "A modular authentication package for FastAPI with optional OTP and role features."
+authors = ["Arash Mohtarami <arashmohtarami.aa@gmail.com>"]
+# license = "MIT"
+# readme = "README.md"
+packages = [
+    { include = "src" }
+]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+psycopg2-binary = "^2.9.10"
+sqlalchemy = "^2.0.37"
+alembic = "^1.14.1"
+fastapi = "^0.115.8"
+uvicorn = "^0.34.0"
+pydantic-settings = "^2.7.1"
+
+[tool.poetry.dev-dependencies]
+pytest = "^7.0"
+black = "^23.0"
+flake8 = "^6.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+# [tool.poetry.extras]
+# otp = ["otp"]
+# role = ["role"]
+
