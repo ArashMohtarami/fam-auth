@@ -117,3 +117,4 @@ media/uploads
 uploads/
 pids/
 logs/**
+docs/build/**
