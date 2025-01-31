@@ -9,6 +9,28 @@ from src.core.database import Base
 
 
 class User(Base):
+    """
+    A class representing a user in the database.
+
+    This class defines the structure of the `users` table and provides the 
+    necessary columns and constraints for storing user-related information.
+
+    Attributes:
+        id (UUID): Universally Unique Identifier for the user (primary key).
+        username (str): Unique username used for login, must have at least 4 characters.
+        email (str): Unique email address of the user (used for communication).
+        password (str): Hashed password for the user.
+        first_name (str): First name of the user (optional).
+        last_name (str): Last name of the user (optional).
+        phone_number (str): Phone number of the user (optional).
+        birth_date (datetime): Birthdate of the user (optional).
+        image (str): URL or path to the user's profile image (optional).
+        is_active (bool): Flag indicating if the user account is active.
+        created (datetime): Timestamp when the user account was created.
+        modified (datetime): Timestamp when the user account was last modified.
+        last_login (datetime): Timestamp of the user's last login (optional).
+    """
+
     __tablename__ = "users"
 
     id = Column(
@@ -98,7 +120,23 @@ class User(Base):
     )
 
     def __repr__(self):
+        """
+        Returns a string representation of the user object.
+
+        The string representation includes the username and email of the user.
+
+        Returns:
+            str: String representation of the user object.
+        """
         return f"<User(username={self.username}, email={self.email})>"
 
     def __str__(self):
+        """
+        Returns a string representation of the user object.
+
+        The string representation includes the username and email of the user.
+
+        Returns:
+            str: String representation of the user object.
+        """
         return f"<User(username={self.username}, email={self.email})>"
