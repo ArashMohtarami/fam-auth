@@ -60,6 +60,10 @@ class UserCreateSchema(UserBaseSchema):
         ...,
         description="Password for the user."
     )
+    confirm_password: str = Field(
+        ...,
+        description="Confirm password for the user."
+    )
 
 
 class UserUpdateSchema(UserBaseSchema):
